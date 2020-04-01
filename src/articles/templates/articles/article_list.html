@@ -1,0 +1,18 @@
+{%extends 'base.html' %}
+
+{% block content%}
+
+<ul>
+  {% for article in object%}
+  
+  <!-- <li>Item {{forloop.counter}} - <a href="/articles/{{article.id}}/">{{article.title}}</a></li>  -->
+
+  <li>Item {{forloop.counter}} - <a href="{{ article.get_absolute_url }}">{{article.title}}</a></li> 
+  
+  {% empty  %}
+  <li>No Article listed...</li>
+  {% endfor %}
+</ul>
+<p><a href="create/">Add a new Article</a></p>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{title| upper | title}}</h1>
+<p>Number: {{my_number}}</p>
+
+ <ul>
+     
+   {% for item in my_list %}
+
+      {% if item == 3 %}
+       <li>item {{ forloop.counter }} :{{item|add:22}} </li>
+      {% elif item == 'abc' %}
+      <li>This is not the network</li>
+      {% else %}
+       <li>item {{ forloop.counter }} :{{item}} </li>
+      {% endif %}
+    
+   {% endfor %}
+
+   
+ </ul>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo impedit aspernatur nam eius, assumenda fugiat, obcaecati corrupti quod dolorum amet est officiis accusamus consequuntur, maxime voluptatibus sint molestias veritatis deserunt corporis ex quaerat. Aspernatur vel itaque distinctio suscipit excepturi ipsa facere, assumenda tenetur quae repellat porro iste odio harum cupiditate?</p>
+
+{{my_html | safe}}
+{% endblock %}
+

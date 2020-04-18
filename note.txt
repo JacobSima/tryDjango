@@ -1,5 +1,6 @@
 
-# django-admin startproject firstproject
+# django-admin startproject firstproject   : start django project
+# python manage.py startapp firtApp : create application within the django project create
 
 
 
